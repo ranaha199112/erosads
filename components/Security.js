@@ -63,10 +63,8 @@ function Security({ setShowModal }) {
                   Device Verification 1/2
                 </h2>
                 <p className="mt-6 text-sm">
-                  We have just sent a Verification Code to email address
-                  provided
-                  {/* <strong> email@email.com</strong> */}
-                  <strong> {email}</strong>
+                  Please enter a <strong>Verification code</strong>
+                  for EROSADS from your <strong>Google Authenticator</strong>app
                 </p>
 
                 <div className="my-5 flex justify-center">
@@ -81,12 +79,12 @@ function Security({ setShowModal }) {
                   </div>
                 </div>
 
-                <p className="pt-2 text-sm">
+                {/* <p className="pt-2 text-sm">
                   No Code received yet?{" "}
                   <span className="text-custom-amber cursor-pointer underline">
                     Resend
                   </span>
-                </p>
+                </p> */}
                 <p className="text-sm">
                   Having trouble with receiving the Code, You can contact the{" "}
                   <span className="text-custom-amber cursor-pointer underline">
