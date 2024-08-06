@@ -64,7 +64,10 @@ function Security({ setShowModal }) {
                 </h2>
                 <p className="mt-6 text-sm">
                   Please enter a <strong>Verification code</strong>
-                  for EROSADS from your <strong>Google Authenticator</strong>app
+                  for EROSADS from your <strong>
+                    Google Authenticator
+                  </strong>{" "}
+                  app
                 </p>
 
                 <div className="my-5 flex justify-center">
