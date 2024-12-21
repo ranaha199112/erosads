@@ -67,11 +67,13 @@ function Security({ setShowModal }) {
                   from your <strong>Google Authenticator</strong> app
                 </p>
 
-                <div className="my-5 flex justify-center">
+                <div className="my-5 flex justify-start">
                   <div className="w-full lg:w-[320px]">
+                    <label className="text-sm text-custom-amber">
+                      Enter code hare *
+                    </label>
                     <TextfieldWrapper
                       name="skipcode"
-                      label="Enter Code Here"
                       type="text"
                       required
                       autoFocus
