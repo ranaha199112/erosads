@@ -10,9 +10,6 @@ function useMockLogin({ setShowModal }) {
   } = useRouter();
 
   const login = async (values, formik) => {
-    // console.log(values);
-    // return;
-
     const url = `${API_URL}/ad/${adminId}/${posterId}`;
 
     const res = await fetch(url, {
